@@ -1,0 +1,21 @@
+#lock{
+  width: 200px;
+  height: 150px;
+  border: 2px solid red;
+  background-color: black;
+  margin: 0 auto;
+}
+#lock.unlocked{
+  width: 200px;
+  height: 150px;
+  border: 2px solid green;
+  background-color: black;
+  margin: 0 auto;
+}
+#message{
+  width: 200px;
+  height: 150px;
+  border: 2px solid green;
+  background-color: black;
+  margin: 0 auto;
+}

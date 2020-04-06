@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hacker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="master2.css">
+  </head>
+  <body>
+    <div id="vue-app" class="w-70 mx-auto border border-1 border-solid my-5">
+      <h1 class="text-centered">Hacking BK</h1>
+      <div id="lock" v-bind:class="{unlocked:ended}" v-show="!msg">
+          <h2 class="pt-4 text-red text-centered"style="" v-show="!ended  ">Locked</h2>
+          <h2 class="pt-4 text-red text-centered text-green" v-show="ended">Unlocked</h2>
+      </div>
+      <div id="message" v-show="msg">
+        <h2 class="-mt-0 text-green text-centered">Successfully !!!!!</h2>
+        <h5 class=" -mt-5 text-green text-centered">Check Bank Account</h5>
+      </div>
+      <div id="health" class="w-20 mx-auto my-5 border border-4 border-solid" v-show="!msg">
+        <div class="bg-red" style="height:20px" v-bind:style="{width: health + '%'}"></div>
+      </div>
+      <div id="controls" class="mb-3 text-centered" style="width:150px; margin:0 auto;">
+        <button class="cursor-pointer" v-on:click="crack" v-show="!ended">Crack</button>
+        <button class="cursor-pointer" v-on:click="restart" v-show="!ended">Restart</button>
+        <button type="button" class="" v-on:click="withdraw" v-show="ended">Withdraw</button>
+
+      </div>
+    </div>
+    <script src="VueJS/vue.js"></script>
+    <script src="VueJS/vue.min.js"></script>
+    <script src="vueapp.js"></script>
+  </body>
+</html>
